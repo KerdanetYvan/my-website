@@ -1,38 +1,131 @@
+/* Général */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  display: grid;
+  grid-template-rows: 60px 1fr auto;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
+  /** En-tête **/
+  .App-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(177, 177, 177);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+    /*** Titre ***/
+    .Header-h1 h1 {
+      margin: 0;
+      margin-left: 40px;
+      padding: 0;
+      font-size: 40px;
+    }
+
+    /*** Barre de navigation ***/
+    .navbar {
+      margin-right: 30px;
+    }
+
+    .navbar li {
+      margin-right: 20px;
+      display: inline;
+    }
+
+    .navbar a {
+      font-weight: 700;
+      text-decoration: none;
+      color: darkslategray;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+  /** Bloc central **/
+  .App-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
   }
-  to {
-    transform: rotate(360deg);
+
+    /*** Barre de profil ***/
+    .App-sidebar {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .Profil {
+      margin: 10px;
+      margin-top: 50px;
+      height: 100px;
+      width: 75%;
+      text-align: center;
+      border-radius: 5px;
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+      background-color: gainsboro;
+    }
+
+    /*** Container d'articles ***/
+
+
+    .Titre {
+      margin: 20px;
+      width: auto;
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .Titre h1 {
+      padding: 10px;
+      padding-left: 20px;
+      font-size: 30px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .Articles {
+      margin: 20px;
+      margin-left: 30px;
+      display: grid;
+      gap: 20px;
+      background-color: chartreuse;
+    }
+
+    #Article {
+      min-height: 100px;
+      max-height: 200px;
+      background-color: grey;
+    }
+
+  /** Pied de page **/
+  .App-footer {
+    background-color: #333333;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
   }
-}
+
+  .App-footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .App-footer li {
+    display: inline;
+    margin: 0 15px;
+  }
+
+  .App-footer a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .App-footer a:hover {
+    text-decoration: underline;
+  }
+
+  .App-footer p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: darkgrey;
+  }
