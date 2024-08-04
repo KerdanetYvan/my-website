@@ -20,7 +20,7 @@ function App() {
       <div className="App-container">
         <div className="App-sidebar">
           <div className="Profil">
-            {/* <img src="">Image de profil</img> */}
+            {/* Ajouter image profil */}
             <h1>Kerdanet Yvan</h1>
             <h2>23 ans | 4 septembre 2000</h2>
             <div className="Separation"></div>
