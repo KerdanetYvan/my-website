@@ -56,12 +56,43 @@
     .Profil {
       margin: 10px;
       margin-top: 50px;
-      height: 100px;
+      height: fit-content;
       width: 75%;
       text-align: center;
       border-radius: 5px;
       box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
       background-color: gainsboro;
+    }
+
+    .Separation {
+      margin-left: 20px;
+      width: 50%;
+      border: gray solid 1px;
+    }
+
+    .Profil p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .Profil h3 {
+      margin-left: 20px;
+      text-align: start;
+    }
+
+    .Profil li {
+      font-size: small;
+      text-align: start;
+    }
+
+    .liste-res-soc {
+      width: 50%;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .res-soc {
+      list-style: none;
     }
 
     /*** Container d'articles ***/
