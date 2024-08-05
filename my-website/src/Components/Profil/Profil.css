@@ -1,0 +1,86 @@
+.Profil {
+    margin: 10px;
+    margin-top: 50px;
+    height: fit-content;
+    width: 65%;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+    background-color: gainsboro;
+}
+
+    img {
+        margin-top: 20px;
+        height: 80%;
+        width: 80%;
+        border-radius: 100%;
+    }
+
+    .Profil h1 {
+        margin: 0;
+    }
+
+    .Profil h2 {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+  .Separation {
+    margin-left: 20px;
+    width: 50%;
+    border: gray solid 1px;
+  }
+
+  .Profil p {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .Profil h3 {
+    margin-bottom: 5px;
+    margin-left: 20px;
+    text-align: start;
+    padding: 0;
+  }
+
+  .Loisirs {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .Profil li {
+    font-size: small;
+    text-align: start;
+  }
+
+    .Jeux-videos {
+        list-style-image: url(../../logo.svg);
+    }
+
+    .Sport {
+        list-style-image: url(../../logo.svg);
+    }
+
+    .Art {
+        list-style-image: url(../../logo.svg);
+    }
+
+  .liste-res-soc {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+    .res-soc {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .res-soc img {
+        border-radius: 0;
+        height: 40%;
+        width: 40%;
+    }

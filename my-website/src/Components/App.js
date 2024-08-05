@@ -1,12 +1,19 @@
 
 import './App.css';
+import Profil from './Profil/Profil.js';
 
 function App() {
+  const ajd = new Date();
+  const moisNoms = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
+
   return (
     <div className="App">
       <header className="App-header">
         <div className="Header-h1">
           <h1>Kerdanet Yvan</h1>
+        </div>
+        <div className="Date">
+          <h2>{ajd.getDate()} {moisNoms[ajd.getMonth()]} {ajd.getFullYear()}</h2>
         </div>
         <div className="navbar">
           <ul>
@@ -19,26 +26,7 @@ function App() {
 
       <div className="App-container">
         <div className="App-sidebar">
-          <div className="Profil">
-            {/* Ajouter image profil */}
-            <h1>Kerdanet Yvan</h1>
-            <h2>23 ans | 4 septembre 2000</h2>
-            <div className="Separation"></div>
-            <p>Je suis développeur web en bachelor 2ème année chez Digital Campus, je recherche une alternance pour l'année scolaire à venir (Septembre 2024).</p>
-            <div className="Separation"></div>
-            <h3>Mes loisirs</h3>
-            <ul>
-              <li>Les Jeux-vidéos : MMORPG, FPS, Gestion, Simulation</li>
-              <li>Le Sport : Escalade, Gouren (lutte bretonne)</li>
-              <li>L'Art : Point de croix, dessin, graphisme</li>
-            </ul>
-            <div className="Separation"></div>
-            <ul className="liste-res-soc">
-              <li className="res-soc">facebook</li>
-              <li className="res-soc">linkedin</li>
-              <li className="res-soc">github</li>
-            </ul>
-          </div>
+          <Profil/>
         </div>
 
         <div className="App-articles">
