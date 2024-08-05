@@ -1,10 +1,24 @@
 
+import React, { useState } from 'react';
 import './App.css';
 import Profil from './Profil/Profil.js';
+import Modal from './Modal/Modal.js';
 
 function App() {
   const ajd = new Date();
   const moisNoms = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
+
+  const [showModalML, setShowModalML] = useState(false);
+  const openModalML = () => setShowModalML(true);
+  const closeModalML = () => setShowModalML(false);
+
+  const [showModalPC, setShowModalPC] = useState(false);
+  const openModalPC = () => setShowModalPC(true);
+  const closeModalPC = () => setShowModalPC(false);
+
+  const [showModalCGU, setShowModalCGU] = useState(false);
+  const openModalCGU = () => setShowModalCGU(true);
+  const closeModalCGU = () => setShowModalCGU(false);
 
   return (
     <div className="App">
@@ -52,13 +66,28 @@ function App() {
 
       <footer className="App-footer">
         <ul>
-          <li><a href="#mention-legales">Mentions légales</a></li>
-          <li><a href="#pol-conf">Politique de confidentialité</a></li>
-          <li><a href="#cond-util">Condition générales d'utilisation</a></li>
+          <li><a href="#mention-legales" onClick={openModalML}>Mentions légales</a></li>
+          <li><a href="#pol-conf" onClick={openModalPC}>Politique de confidentialité</a></li>
+          <li><a href="#cond-util" onClick={openModalCGU}>Conditions générales d'utilisation</a></li>
           <li><a href="mailto:kerdanety@gmail.com">Contact</a></li>
         </ul>
         <p>&copy; 2024 Yvan Kerdanet. Tous droits réservés.</p>
       </footer>
+
+      <Modal show={showModalML} onClose={closeModalML}>
+        <h2>Mentions légales</h2>
+        <p>Lorem Ipsum dolor es...</p>
+      </Modal>
+
+      <Modal show={showModalPC} onClose={closeModalPC}>
+        <h2>Politique de confidentialité</h2>
+        <p>Lorem Ipsum dolor es...</p>
+      </Modal>
+
+      <Modal show={showModalCGU} onClose={closeModalCGU}>
+        <h2>Conditions générales d'utilisation</h2>
+        <p>Lorem Ipsum dolor es...</p>
+      </Modal>
     </div>
   );
 }
