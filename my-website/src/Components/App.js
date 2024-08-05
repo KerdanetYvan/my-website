@@ -76,7 +76,9 @@ function App() {
 
       <Modal show={showModalML} onClose={closeModalML}>
         <h2>Mentions légales</h2>
-        <p>Lorem Ipsum dolor es...</p>
+        <p>Yvan Kerdanet - Étudiant</p>
+        <p>Mail: kerdanety@gmail.com - N° téléphone : 06 34 63 69 18</p>
+        <p>Add hosting...</p>
       </Modal>
 
       <Modal show={showModalPC} onClose={closeModalPC}>
