@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Footer.css';
 import Modal from '../Modal/Modal';
 
 function Footer() {
