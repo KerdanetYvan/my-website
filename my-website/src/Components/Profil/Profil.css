@@ -44,32 +44,50 @@
   }
 
   .Loisirs {
+    list-style: none;
+    padding: 0;
     margin: 0;
+    margin-left: 15px;
     margin-bottom: 20px;
   }
 
-  .Profil li {
+  .Loisirs li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  #manette {
+    height: 35px;
+    width: 36px;
+  }
+
+  .list-icons {
+    padding: 0;
+    margin: 0;
+    margin-right: 5px;
+    height: 30px;
+    width: 30px;
+  }
+
+  .Loisirs li p {
+    margin: 0;
+    margin-right: 10px;
+    padding: 0;
+  }
+
+  .Profil li p {
     font-size: small;
     text-align: start;
   }
 
-    .Jeux-videos {
-        list-style-image: url(../../logo.svg);
-    }
-
-    .Sport {
-        list-style-image: url(../../logo.svg);
-    }
-
-    .Art {
-        list-style-image: url(../../logo.svg);
-    }
 
   .liste-res-soc {
-    width: 50%;
+    width: 40%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 0;
+    margin-top: 10px;
     margin-bottom: 10px;
   }
 
@@ -79,8 +97,8 @@
         list-style: none;
     }
 
-    .res-soc img {
-        border-radius: 0;
-        height: 40%;
-        width: 40%;
+    .res-icons {
+        height: 20px;
+        width: 20px;
+        color: rgb(92, 92, 92);
     }

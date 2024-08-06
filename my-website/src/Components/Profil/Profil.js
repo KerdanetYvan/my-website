@@ -1,8 +1,8 @@
 import './Profil.css';
 import photoProfil from '../../Assets/photoProfil.jpg';
-import facebook from '../../Assets/facebook.svg';
-import linkedin from '../../Assets/linkedin.svg';
-import github from '../../Assets/github.svg';
+import React from 'react';
+import { GiConsoleController, GiBiceps, GiLargePaintBrush } from "react-icons/gi";
+import { AiFillFacebook, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 
 function Profil() {
     const ajd = new Date();
@@ -26,15 +26,27 @@ function Profil() {
             <div className="Separation"></div>
             <h3>Mes loisirs</h3>
             <ul className="Loisirs">
-              <li className="Jeux-videos">Les Jeux-vidéos : MMORPG, FPS, Gestion, Simulation</li>
-              <li className="Sport">Le Sport : Escalade, Gouren (lutte bretonne)</li>
-              <li className="Art">L'Art : Point de croix, dessin, graphisme</li>
+                <li className="Jeux-videos"><GiConsoleController className='list-icons' id='manette' /><p> Les Jeux-vidéos : MMORPG, FPS, Gestion, Simulation</p></li>
+                <li className="Sport"><GiBiceps className='list-icons' /><p> Le Sport : Escalade, Gouren (lutte bretonne)</p></li>
+                <li className="Art"><GiLargePaintBrush className='list-icons' /><p> L'Art : Point de croix, dessin, graphisme</p></li>
             </ul>
             <div className="Separation"></div>
             <ul className="liste-res-soc">
-              <li className="res-soc"><a href="https://facebook.com/profile.php?id=100009325860351" target="_blank" rel="noopener noreferrer"><img src={facebook} alt="Facebook" /></a></li>
-              <li className="res-soc"><a href="https://www.linkedin.com/in/yvankerdanet" target="_blank" rel="noopener noreferrer"><img src={linkedin} alt="Linkedin" /></a></li>
-              <li className="res-soc"><a href="https://github.com/KerdanetYvan" target="_blank" rel="noopener noreferrer"><img src={github} alt="Github" /></a></li>
+                <li className="res-soc">
+                    <a href="https://facebook.com/profile.php?id=100009325860351" target="_blank" rel="noopener noreferrer">
+                        <AiFillFacebook className='res-icons' />
+                    </a>
+                </li>
+                <li className="res-soc">
+                    <a href="https://www.linkedin.com/in/yvankerdanet" target="_blank" rel="noopener noreferrer">
+                        <AiFillLinkedin className='res-icons' />
+                    </a>
+                </li>
+                <li className="res-soc">
+                    <a href="https://github.com/KerdanetYvan" target="_blank" rel="noopener noreferrer">
+                        <AiFillGithub className='res-icons' />
+                    </a>
+                </li>
             </ul>
         </div>
     );

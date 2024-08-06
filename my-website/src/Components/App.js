@@ -6,7 +6,8 @@ import Modal from './Modal/Modal.js';
 
 function App() {
   const ajd = new Date();
-  const moisNoms = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
+  const moisNoms = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+  const jourNoms = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
 
   const [showModalML, setShowModalML] = useState(false);
   const openModalML = () => setShowModalML(true);
@@ -27,7 +28,7 @@ function App() {
           <h1>Kerdanet Yvan</h1>
         </div>
         <div className="Date">
-          <h2>{ajd.getDate()} {moisNoms[ajd.getMonth()]} {ajd.getFullYear()}</h2>
+          <h2>{jourNoms[ajd.getDay()]} {ajd.getDate()} {moisNoms[ajd.getMonth()]} {ajd.getFullYear()}</h2>
         </div>
         <div className="navbar">
           <ul>
@@ -71,14 +72,16 @@ function App() {
           <li><a href="#cond-util" onClick={openModalCGU}>Conditions générales d'utilisation</a></li>
           <li><a href="mailto:kerdanety@gmail.com">Contact</a></li>
         </ul>
-        <p>&copy; 2024 Yvan Kerdanet. Tous droits réservés.</p>
+        <p>&copy; 2024 Yvan Kerdanet. Tous droits réservés. Uicons by <a href="https://www.flaticon.com/uicons">Flaticon</a></p>
       </footer>
 
       <Modal show={showModalML} onClose={closeModalML}>
         <h2>Mentions légales</h2>
-        <p>Yvan Kerdanet - Étudiant</p>
-        <p>Mail: kerdanety@gmail.com - N° téléphone : 06 34 63 69 18</p>
-        <p>Add hosting...</p>
+        <div className="Text">
+          <p>Yvan Kerdanet - Étudiant</p>
+          <p>Mail: kerdanety@gmail.com - N° téléphone : 06 34 63 69 18</p>
+          <p>Add hosting...</p>
+        </div>
       </Modal>
 
       <Modal show={showModalPC} onClose={closeModalPC}>
