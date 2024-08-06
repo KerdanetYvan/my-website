@@ -86,12 +86,24 @@ function App() {
 
       <Modal show={showModalPC} onClose={closeModalPC}>
         <h2>Politique de confidentialité</h2>
-        <p>Lorem Ipsum dolor es...</p>
+        <div className='Text'>
+          <p>Le but de cette politique de confidentialité est d'informer l'utilisateur du traitement de ses données.</p>
+          <p>Aucune donnée personnel de l'utilisateur n'est recueilli hors informations données par l'utilisateur dans les champs prévu à cet effet.</p>
+          <p>L'utilisateur à le droits de naviguer à travers le site sans soucis d'illégalité.</p>
+          <h3>Consentement :</h3>
+          <p>L'utilisateur accepte que toute donnée qu'il communique via zone de texte soit enregistrée à des fins professionnel et de communication.</p>
+          <h3>Raison d'existence du site :</h3>
+          <p>Domaine : kerdanetyvan.bzh</p>
+          <p>Propriétaire : Kerdanet Yvan</p>
+          <p>Site ayant pour but de faire office de portfolio ainsi que blog d'actualité personnel.</p>
+        </div>
       </Modal>
 
       <Modal show={showModalCGU} onClose={closeModalCGU}>
         <h2>Conditions générales d'utilisation</h2>
-        <p>Lorem Ipsum dolor es...</p>
+        <div className='Text'>
+          
+        </div>
       </Modal>
     </div>
   );
