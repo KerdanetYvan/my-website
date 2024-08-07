@@ -1,5 +1,5 @@
 .App-footer {
-    background-color: #333333;
+    background-color: #3d1e00;
     padding-top: 20px;
     padding-bottom: 10px;
     text-align: center;
@@ -28,5 +28,5 @@
   .App-footer p {
     margin: 10px 0 0;
     font-size: 14px;
-    color: darkgrey;
+    color: rgb(156, 102, 52);
   }

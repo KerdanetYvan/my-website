@@ -6,14 +6,16 @@
     text-align: center;
     border-radius: 5px;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
-    background-color: gainsboro;
+    background-color: rgb(209, 152, 105);
+    border: 1px solid rgb(65, 26, 0);
 }
 
-    img {
+    .ProfilPhoto {
         margin-top: 20px;
         height: 80%;
         width: 80%;
         border-radius: 100%;
+        border: 3px solid rgb(65, 26, 0);
     }
 
     .Profil h1 {
@@ -28,7 +30,7 @@
   .Separation {
     margin-left: 20px;
     width: 50%;
-    border: gray solid 1px;
+    border: rgb(78, 39, 3) solid 1px;
   }
 
   .Profil p {
@@ -92,13 +94,17 @@
   }
 
     .res-soc {
-        margin: 0;
-        padding: 0;
-        list-style: none;
+      margin: 0;
+      padding: 0;
+      list-style: none;
     }
 
     .res-icons {
-        height: 20px;
-        width: 20px;
-        color: rgb(92, 92, 92);
+      height: 20px;
+      width: 20px;
+      color: rgb(168, 105, 62);
+    }
+
+    .res-icons:hover {
+      color: rgb(65, 26, 0);
     }

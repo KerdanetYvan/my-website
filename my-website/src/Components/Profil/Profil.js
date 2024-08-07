@@ -18,7 +18,7 @@ function Profil() {
 
     return (
         <div className="Profil">
-            <img src={photoProfil} alt="Profil" />
+            <img src={photoProfil} alt="Profil" className='ProfilPhoto'/>
             <h1>Kerdanet Yvan</h1>
             <h2>{age} ans</h2>
             <div className="Separation"></div>
