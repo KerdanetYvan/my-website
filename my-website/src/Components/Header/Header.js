@@ -18,9 +18,9 @@ function Header({page}) {
             </div>
             <div className="navbar">
                 <ul>
-                    <li><a href="#home">Accueil</a></li>
-                    <li><a href="#about">A propos</a></li>
-                    <li><a href="#contact-me">Me contacter</a></li>
+                    <li><a href="/home">Accueil</a></li>
+                    <li><a href="/about">A propos</a></li>
+                    <li><a href="/contact">Me contacter</a></li>
                 </ul>
             </div>
         </header>

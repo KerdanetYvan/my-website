@@ -1,0 +1,45 @@
+.Contact {
+    display: grid;
+  grid-template-rows: 60px 1fr auto;
+  min-height: 100vh;
+  background-color: rgb(168, 97, 30);
+  background-image: url('../../Assets/cafe.png');
+  animation: moveCoffeeCup 360s linear infinite;
+}
+
+@keyframes moveCoffeeCup {
+    from {
+      background-position: top left;
+    } to {
+      background-position: bottom right;
+    }
+}
+
+.Contact-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.Contact-sidebar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Titre-form {
+    margin: 20px;
+    width: auto;
+    height: auto;
+    background-color: rgb(219, 163, 111);
+    border-radius: 5px;
+    border: 1px solid rgb(82, 39, 0);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.Titre-form h1 {
+    padding: 7px;
+    margin: 0;
+    padding-left: 20px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(82, 39, 0);
+}
