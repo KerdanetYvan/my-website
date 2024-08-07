@@ -1,10 +1,10 @@
 
 import React from 'react';
 import './Home.css';
-import Header from '../Header/Header.js';
-import Profil from '../Profil/Profil.js';
-import Footer from '../Footer/Footer.js';
-import Article from '../Article/Article.js';
+import Header from '../../Components/Header/Header.js';
+import Profil from '../../Components/Profil/Profil.js';
+import Footer from '../../Components/Footer/Footer.js';
+import Article from '../../Components/Article/Article.js';
 import EncyclopeDnD from "../../Assets/Encyclopé'DnD.png";
 
 function Home() {
