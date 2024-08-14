@@ -27,7 +27,8 @@ function Footer() {
                 <div className="Text">
                 <p>Yvan Kerdanet - Étudiant</p>
                 <p>Mail: kerdanety@gmail.com - N° téléphone : 06 34 63 69 18</p>
-                <p>Add hosting...</p>
+                <p>IONOS SARL</p>
+                <p>7 Place de la Gare, 57200 Sarreguemines</p>
                 </div>
             </Modal>
 
