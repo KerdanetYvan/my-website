@@ -1,0 +1,113 @@
+.About {
+    display: grid;
+    grid-template-rows: 60px 1fr auto;
+    min-height: 100vh;
+    background-color: rgb(168, 97, 30);
+    background-image: url('../../Assets/cafe.png');
+    animation: moveCoffeeCup 360s linear infinite;
+}
+
+@keyframes moveCoffeeCup {
+    from {
+        background-position: top left;
+    } to {
+        background-position: bottom right;
+    }
+}
+
+.IntroPerso {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding-right: 15px;
+    border-bottom-right-radius: 15px;
+    border: 1px solid rgb(82, 39, 0);
+    background-color: rgb(219, 163, 111);
+}
+
+#PhotoNom {
+    padding: 15px;
+}
+
+#PhotoNom img {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    border: 3px solid rgb(82, 39, 0);
+}
+
+#Pres {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#citation {
+    margin: 10px;
+    padding: 10px;
+    width: fit-content;
+    align-self: center;
+    font-style: italic;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#citation:before {
+    content: open-quote;
+    line-height: 0;
+    vertical-align: 0.3em;
+}
+
+#citation:after {
+    content: close-quote;
+    line-height: 0;
+    vertical-align: 0.3em;
+}
+
+.ww {
+    display: flex;
+    justify-content: center;
+}
+
+.WorkingOnIt {
+    margin: 15px;
+    height: 120px;
+    width: 30%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(219, 163, 111, 0.5);
+}
+
+.WorkingOnIt h1 {
+    margin: 0;
+    padding: 0;
+    color: rgb(82, 39, 0);
+}
+
+.chargement {
+    height: 60px;
+    width: 60px;
+    color: rgb(82, 39, 0);
+    animation: rotateAndScale 5s infinite linear;
+}
+
+@keyframes rotateAndScale {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    25% {
+      transform: rotate(90deg) scale(1.2);
+    }
+    50% {
+      transform: rotate(180deg) scale(1);
+    }
+    75% {
+      transform: rotate(270deg) scale(0.8);
+    }
+    100% {
+      transform: rotate(360deg) scale(1);
+    }
+  }

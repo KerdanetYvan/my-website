@@ -9,7 +9,7 @@ function Article({ img, title, cat, desc}) {
                 <h4 className='TitreArticle'>{title}</h4>
                 <p className='Categorie'>{cat}</p>
                 <p className='Description'>{desc}</p>
-                <a href='#' className='More'>En savoir plus...</a>
+                <a href='/' className='More'>En savoir plus...</a>
             </div>
         </div>
     );
