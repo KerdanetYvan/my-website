@@ -3,15 +3,52 @@
 import { FaBars, FaHeart, FaChevronDown, FaHtml5, FaCss3, FaJava, FaPython, FaPaintBrush, FaGithub, FaLinkedin, FaPhone, FaEnvelope } from "react-icons/fa";
 import { SiTypescript, SiJavascript, SiAngular, SiReact, SiFigma, SiCanva, SiC, SiTailwindcss } from "react-icons/si";
 import { DiRasberryPi, DiGit, DiLinux } from "react-icons/di";
+import { AiFillCloseCircle } from "react-icons/ai";
 import Image from "next/image";
 import CoffeeCup from "../assets/tasse-de-cafe.png";
 import Pdp from "../assets/Yvan-PORTRAIT-JoanKPhotographie-4.jpg";
-import React, { useRef } from 'react';
+import SSL from "../assets/SimpleSchedulerLogo.png";
+import SS from "../assets/SimpleScheduler.png";
+import DnD from "../assets/Encyclopednd.png";
+import EduCapt from "../assets/Educapture.png";
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export default function Home() { 
+export default function Home() {
+  const [showModalML, setShowModalML] = useState(false);
+  const openModalML = () => setShowModalML(true);
+  const closeModalML = () => setShowModalML(false);
+
+  const [showModalPC, setShowModalPC] = useState(false);
+  const openModalPC = () => setShowModalPC(true);
+  const closeModalPC = () => setShowModalPC(false);
+  
+  const form = useRef();
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm('service_i3tnh4h', 'template_2dzfn8o', form.current, {
+                publicKey: 'nLXt-1yj1A6wqdlFt',
+            })
+            .then(
+                () => {
+                    console.log('success');
+                    toast.success('Message envoyé avec succès !', {
+                        position: "bottom-right"
+                    })
+                },
+                (error) => {
+                    console.log('failed...', error.text);
+                    toast.error('Erreur lors de l\'envoi !', {
+                        position: "bottom-right"
+                    })
+                },
+            );
+  };
+
   return (
     <div id="home">
       <header id="header" className="w-full h-fit p-4 bg-[url(../assets/bg.jpg)] bg-cover">
@@ -39,59 +76,106 @@ export default function Home() {
         <section className="mt-4">
           <h1 className="text-2xl font-bold text-slate-700">Mes projets</h1>
           <p className="italic text-xs text-slate-400">Voici mes différents projets à travers lesquels j'ai pu appliquer mes compétences.</p>
-          <div>
+          <div className="w-11/12 m-auto">
             <ul>
-              <li></li>
+              <li className="border-2 border-slate-900 mt-2">
+                <div className="flex">
+                  <Image src={SSL} alt="SimpleScheduler Logo" className="w-1/3 h-auto m-2 rounded"></Image>
+                  <div className="flex flex-col justify-center items-start">
+                    <h2 className="font-bold">SimpleScheduler</h2>
+                    <p className="text-sm italic text-slate-600">courte description...</p>
+                  </div>
+                </div>
+                <p className="text-xs ml-4 mb-2 font-bold text-slate-400">//Design UI/UX</p>
+              </li>
+              <li className="border-2 border-slate-900 mt-0">
+                <div className="flex">
+                  <Image src={DnD} alt="Encyclopé'DnD Logo" className="w-1/3 h-auto m-2 rounded-3xl"></Image>
+                  <div className="flex flex-col justify-center items-start">
+                    <h2 className="font-bold">Encyclopé'DnD</h2>
+                    <p className="text-sm italic text-slate-600">courte description...</p>
+                  </div>
+                </div>
+                <p className="text-xs ml-4 mb-2 font-bold text-slate-400">//Front-end //Back-end //Design UI/UX</p>
+              </li>
+              <li className="border-2 border-slate-900 mt-0">
+                <div className="flex">
+                  <Image src={EduCapt} alt="Educapture Logo" className="w-1/3 h-auto m-2 rounded"></Image>
+                  <div className="flex flex-col justify-center items-start">
+                    <h2 className="font-bold">Éducapture</h2>
+                    <p className="text-sm italic text-slate-600">courte description...</p>
+                  </div>
+                </div>
+                <p className="text-xs ml-4 mb-2 font-bold text-slate-400">//Design UI/UX</p>
+              </li>
             </ul>
           </div>
         </section>
+          
+        <section className="mt-2">
+          <h1 className="text-2xl font-bold text-slate-700">Contact</h1>
+          <form ref={form} onSubmit={sendEmail}>
+            <div>
+              <div>
+                <label className="font-bold text-slate-500">Votre Nom :</label>
+                <input type='text' name='from_name' required className="h-8 w-full bg-slate-200 rounded p-2"/>
+              </div>
+              <div id='label2'>
+                <label className="font-bold text-slate-500">Votre Email :</label>
+                <input type='email' name='from_email' required className="h-8 w-full bg-slate-200 rounded p-2"/>
+              </div>
+            </div>
+            <div>
+              <label className="font-bold text-slate-500">Votre message :</label>
+              <textarea name='message' className="h-32 w-full bg-slate-200 rounded p-2"/>
+            </div>
+            <div className="flex justify-end">
+              <input type='submit' value="Envoyer" id="button" className="bg-slate-700 text-white font-bold px-2 py-0.5 rounded"/>
+            </div>
+          </form>
+        </section>
       </main>
-      {/* <Landing />
-      <div id="Article">
-        <div id="intro">
-          <h1>Qui suis-je ?</h1>
-          <p>Étudiant à Digital Campus depuis le 23 septempbre 2024, je suis en Bachelor 2ème année de développement web.</p>
-          <p>Je recherche activement une alternance dans ce domaine pour une période de 2 ans sous un rythme de 2 jours en formation, 3 jours en entreprise</p>
-          <h2>Une phrase qui me défini ?</h2>
-          <blockquote>"A tout problème sa solution, et s'il n'y en a pas, on en trouvera une !"</blockquote>
+
+      <footer>
+        <section>
+
+        </section>
+        <section>
+          <ul>
+            <li><a href="#mention-legales" onClick={openModalML}>Mentions légales</a></li>
+            <li><a href="#pol-conf" onClick={openModalPC}>Politique de confidentialité</a></li>
+            <li><a href="#contacts">Contact</a></li>
+          </ul>
+
+          
+        </section>
+      </footer>
+
+      <Modal show={showModalML} onClose={closeModalML} className="">
+        <h2>Mentions légales</h2>
+        <div className="Text">
+          <p>Yvan Kerdanet - Étudiant</p>
+          <p>Mail: kerdanety@gmail.com - N° téléphone : 06 34 63 69 18</p>
+          <p>IONOS SARL</p>
+          <p>7 Place de la Gare, 57200 Sarreguemines</p>
         </div>
-        <Bloc Titre="Mes compétences" Position="gauche">
-          <div id="icons">
-            <FaHtml5 className="icon" />
-            <FaCss3 className="icon" />
-            <FaJava className="icon" />
-            <FaPython className="icon" />
-            <SiTypescript className="icon" />
-            <SiJavascript className="icon" />
-            <SiAngular className="icon" />
-            <SiReact className="icon" />
-            <SiFigma className="icon" />
-            <SiCanva className="icon" />
-            <SiC className="icon"/>
-            <DiRasberryPi className="icon" />
-            <DiGit className="icon" />
-            <DiLinux className="icon" />
-          </div>
-        </Bloc>
-        <Bloc Titre="Mes Projets" Position="droite">
-          <div id="projets">
-            <Projet type='angular' titre="Encyclopé'DnD" desc="Projet scolaire se basant sur le framework Angular, utilisant le service Firebase ayant pour but d'exploiter une API." />
-            <Projet type='design' titre="Educapture" desc="Projet ayant pour but de créer une entreprise en passant par toutes les étapes nécéssaire. Rôle occupé : Designer UX/UI." />
-          </div>
-        </Bloc>
-        <Bloc Titre="Mes Réseaux" Position="gauche">
-          <div id="reseaux">
-            <a href="https://github.com/KerdanetYvan"><FaGithub className="res"/></a>
-            <a href="https://www.linkedin.com/in/yvankerdanet/"><FaLinkedin className="res"/></a>
-            <a href="tel:+33634636918"><FaPhone className="res"/></a>
-            <a href="mailto:kerdanety@gmail.com"><FaEnvelope className="res"/></a>
-          </div>
-          <div id="Formulaire_de_contact">
-            <h1>Me Contacter ?</h1>
-            <Formulaire />
-          </div>
-        </Bloc>
-      </div> */}
+      </Modal>
+
+      <Modal show={showModalPC} onClose={closeModalPC}>
+        <h2>Politique de confidentialité</h2>
+        <div className='Text'>
+          <p>Le but de cette politique de confidentialité est d'informer l'utilisateur du traitement de ses données.</p>
+          <p>Aucune donnée personnel de l'utilisateur n'est recueilli hors informations données par l'utilisateur dans les champs prévu à cet effet.</p>
+          <p>L'utilisateur à le droits de naviguer à travers le site sans soucis d'illégalité.</p>
+          <h3>Consentement :</h3>
+          <p>L'utilisateur accepte que toute donnée qu'il communique via zone de texte soit enregistrée à des fins professionnel et de communication.</p>
+          <h3>Raison d'existence du site :</h3>
+          <p>Domaine : kerdanetyvan.bzh</p>
+          <p>Propriétaire : Kerdanet Yvan</p>
+          <p>Site ayant pour but de faire office de portfolio ainsi que blog d'actualité personnel.</p>
+        </div>
+      </Modal>
+      
       {/* <footer className="App-footer">
         <ul>
           <li><a href="#mention-legales" /*onClick={openModalML}>Mentions légales</a></li>
@@ -104,57 +188,24 @@ export default function Home() {
   );
 }
 
-function Formulaire() {
-  const form = useRef();
-    const sendEmail = (e) => {
-        e.preventDefault();
-
-        emailjs
-            .sendForm('service_i3tnh4h', 'template_2dzfn8o', form.current, {
-                publicKey: 'nLXt-1yj1A6wqdlFt',
-            })
-            .then(
-                () => {
-                    console.log('success');
-                    toast.success('Message envoyé avec succès !', {
-                        position: "bottom-right"
-                    })
-                },
-                (error) => {
-                    console.log('failed...', error.text);
-                    toast.error('Erreur lors de l\'envoi !', {
-                        position: "bottom-right"
-                    })
-                },
-            );
-  };
+const Modal = ({ show, onClose, children }) => {
+  if (!show) {
+    return null;
+  }
 
   return (
-    <div>
-      <form ref={form} onSubmit={sendEmail}>
-        <div className='form1prt'>
-          <div id='label1'>
-            <label>Votre Nom :</label>
-            <input type='text' name='from_name' required />
-          </div>
-          <div id='label2'>
-            <label>Votre Email :</label>
-            <input type='email' name='from_email' required />
-          </div>
-        </div>
-        <div className='form2prt'>
-          <label>Votre message :</label>
-          <textarea name='message' />
-        </div>
-        <div id='buttonDiv'>
-          <input type='submit' value="Envoyer" id="button"/>
-        </div>
-      </form>
+    <div className="modal" onClick={onClose}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <span className="close" onClick={onClose}><AiFillCloseCircle /></span>
+        {children}
+      </div>
     </div>
   );
-}
+};
 
-function Logo({ type }) {
+
+
+/* function Logo({ type }) {
   switch(type){
     case 'design':
       return <FaPaintBrush className="logoProj" />
@@ -168,9 +219,9 @@ function Logo({ type }) {
         <FaCss3 />
       </div>
   }
-}
+} */
 
-function Projet({ type, titre, desc }) {
+/* function Projet({ type, titre, desc }) {
   return (
     <div className="proj">
       <div className="logotitre">
@@ -180,4 +231,4 @@ function Projet({ type, titre, desc }) {
       <p className="desc">{ desc }</p>
     </div>
   )
-}
+} */
