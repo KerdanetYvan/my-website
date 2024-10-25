@@ -68,11 +68,11 @@ export default function Home() {
       <main className="p-4 pt-4 md:w-2/3 lg:w-3/4">
         <section className="hidden md:flex md:justify-end w-full">
           <ul className="w-3/4 flex justify-around text-2xl font-bold text-slate-700">
-            <li>Acceuil</li>
-            <li>Compétences</li>
-            <li>Projets</li>
-            <li>A propos</li>
-            <li>Contact</li>
+            <li><a href="./">Acceuil</a></li>
+            <li><a href="./skills">Compétences</a></li>
+            <li><a href="./projects">Projets</a></li>
+            <li><a href="./about">A propos</a></li>
+            <li><a href="./contact">Contact</a></li>
           </ul>
         </section>
         <section>
@@ -86,7 +86,7 @@ export default function Home() {
               <li className="border-2 border-black p-2"><SiJavascript  className="w-8 h-auto" /></li>
               <li className="border-2 border-black p-2"><FaGithub  className="w-8 h-auto" /></li>
             </ul>
-            <p className="absolute right-1 text-sm italic hover:underline"><a href="./competences">Voir plus...</a></p>
+            <p className="absolute right-1 text-sm italic hover:underline"><a href="./skills">Voir plus...</a></p>
           </div>
         </section>
 
@@ -127,6 +127,7 @@ export default function Home() {
               </li>
             </ul>
           </div>
+          <p className="absolute right-1 text-sm italic hover:underline"><a href="./projects">Voir plus...</a></p>
         </section>
           
         <section className="mt-2">
