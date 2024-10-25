@@ -58,8 +58,8 @@ export default function Home() {
           <a href="https://www.linkedin.com/in/yvankerdanet/" target="_blank" className="avatar"><Image src={Pdp} alt="photo de profil" className="h-32 w-auto rounded-full"/></a>
           <h1 className="w-4/5 text-center text-slate-100 md:text-end md:mr-4"><strong>Je suis Yvan</strong><br />Étudiant à Digital Campus<br />Développeur web<br /><b className="italic font-normal">En recherche d'alternance</b></h1>
           <ul className="hidden md:flex md:justify-around w-1/2 mt-2 mr-4">
-            <li className="p-1 rounded bg-gray-50"><a href=""><FaGithub className="h-auto w-4 text-slate-700"/></a></li>
-            <li className="p-1 rounded bg-gray-50"><a href=""><FaLinkedin className="h-auto w-4 text-slate-700"/></a></li>
+            <li className="p-1 rounded bg-gray-50"><a href="https://github.com/KerdanetYvan"><FaGithub className="h-auto w-4 text-slate-700"/></a></li>
+            <li className="p-1 rounded bg-gray-50"><a href="https://www.linkedin.com/in/yvankerdanet/"><FaLinkedin className="h-auto w-4 text-slate-700"/></a></li>
             <li className="p-1 rounded bg-gray-50"><a href="tel:0634636918"><FaPhone className="h-auto w-4 text-slate-700"/></a></li>
             <li className="p-1 rounded bg-gray-50"><a href="mailto:kerdanety@gmail.com"><FaEnvelope className="h-auto w-4 text-slate-700"/></a></li>
           </ul>
@@ -94,7 +94,7 @@ export default function Home() {
               <li className="border-2 border-black p-2 hidden lg:block"><SiCanva  className="w-8 h-auto" /></li>
               <a href="./skills" className="border-2 border-black p-2 hidden lg:block hover:bg-black hover:text-white transition-colors duration-300 ease-in-out"><li><FaEllipsisH  className="w-8 h-auto" /></li></a>
             </ul>
-            <p className="absolute right-1 text-sm italic hover:underline"><a href="./skills">Voir plus...</a></p>
+            <p className="absolute right-1 text-sm italic hover:underline lg:hidden"><a href="./skills">Voir plus...</a></p>
           </div>
         </section>
 
@@ -173,8 +173,8 @@ export default function Home() {
         <section className="w-3/4 m-auto md:w-1/3 md:ml-24 mb-0.5 md:mb-2">
           <h1 className="font-bold text-xl mb-1">Mes réseaux</h1>
           <ul className="flex justify-around">
-            <li><a href=""><FaGithub className="h-auto w-8"/></a></li>
-            <li><a href=""><FaLinkedin className="h-auto w-8"/></a></li>
+            <li><a href="https://github.com/KerdanetYvan"><FaGithub className="h-auto w-8"/></a></li>
+            <li><a href="https://www.linkedin.com/in/yvankerdanet/"><FaLinkedin className="h-auto w-8"/></a></li>
             <li><a href="tel:0634636918"><FaPhone className="h-auto w-8"/></a></li>
             <li><a href="mailto:kerdanety@gmail.com"><FaEnvelope className="h-auto w-8"/></a></li>
           </ul>
