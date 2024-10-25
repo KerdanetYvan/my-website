@@ -1,6 +1,6 @@
 "use client"
 
-import { FaBars, FaHeart, FaChevronDown, FaHtml5, FaCss3, FaJava, FaPython, FaPaintBrush, FaGithub, FaLinkedin, FaPhone, FaEnvelope } from "react-icons/fa";
+import { FaBars, FaHeart, FaChevronDown, FaHtml5, FaCss3, FaJava, FaPython, FaPaintBrush, FaGithub, FaLinkedin, FaPhone, FaEnvelope, FaEllipsisH } from "react-icons/fa";
 import { SiTypescript, SiJavascript, SiAngular, SiReact, SiFigma, SiCanva, SiC, SiTailwindcss } from "react-icons/si";
 import { DiRasberryPi, DiGit, DiLinux } from "react-icons/di";
 import { AiFillCloseCircle } from "react-icons/ai";
@@ -54,9 +54,9 @@ export default function Home() {
   return (
     <div id="home" className="md:flex md:flex-col md:items-end">
       <header id="header" className="w-full h-fit p-4 bg-[url(../assets/bg.jpg)] bg-cover md:fixed md:top-0 md:left-0 md:w-1/3 md:h-full md:flex md:items-center md:justify-end lg:w-1/4">
-        <div className="flex flex-col items-center md:items-end md:w-full">
+        <div className="flex flex-col items-center md:items-end md:w-full md:h-3/5">
           <a href="https://www.linkedin.com/in/yvankerdanet/" target="_blank" className="avatar"><Image src={Pdp} alt="photo de profil" className="h-32 w-auto rounded-full"/></a>
-          <h1 className="w-4/5 text-center text-slate-100 md:text-end md:mr-4"><strong>Je suis Yvan</strong><br />Étudiant à Digital Campus<br />Alternant en développement web</h1>
+          <h1 className="w-4/5 text-center text-slate-100 md:text-end md:mr-4"><strong>Je suis Yvan</strong><br />Étudiant à Digital Campus<br />Développeur web<br /><b className="italic font-normal">En recherche d'alternance</b></h1>
           <ul className="hidden md:flex md:justify-around w-1/2 mt-2 mr-4">
             <li className="p-1 rounded bg-gray-50"><a href=""><FaGithub className="h-auto w-4 text-slate-700"/></a></li>
             <li className="p-1 rounded bg-gray-50"><a href=""><FaLinkedin className="h-auto w-4 text-slate-700"/></a></li>
@@ -67,7 +67,7 @@ export default function Home() {
       </header>
       <main className="p-4 pt-4 md:w-2/3 lg:w-3/4">
         <section className="hidden md:flex md:justify-end w-full">
-          <ul className="w-3/4 flex justify-around text-2xl font-bold text-slate-700">
+          <ul className="w-3/4 flex justify-around text-base lg:text-2xl font-bold text-slate-700">
             <li><a href="./">Acceuil</a></li>
             <li><a href="./skills">Compétences</a></li>
             <li><a href="./projects">Projets</a></li>
@@ -75,7 +75,7 @@ export default function Home() {
             <li><a href="./contact">Contact</a></li>
           </ul>
         </section>
-        <section>
+        <section> 
           <h1 className="text-2xl font-bold text-slate-700">Mes compétences</h1>
           <p className="italic text-xs text-slate-400">Voici mes différentes compétences techniques et autres.</p>
           <div className="mt-2">
@@ -85,6 +85,14 @@ export default function Home() {
               <li className="border-2 border-black p-2"><FaHtml5  className="w-8 h-auto" /></li>
               <li className="border-2 border-black p-2"><SiJavascript  className="w-8 h-auto" /></li>
               <li className="border-2 border-black p-2"><FaGithub  className="w-8 h-auto" /></li>
+              <li className="border-2 border-black p-2"><FaJava  className="w-8 h-auto" /></li>
+              <li className="border-2 border-black p-2 hidden md:block"><FaPython  className="w-8 h-auto" /></li>
+              <li className="border-2 border-black p-2 hidden md:block"><SiTypescript  className="w-8 h-auto" /></li>
+              <li className="border-2 border-black p-2 hidden md:block"><SiAngular  className="w-8 h-auto" /></li>
+              <li className="border-2 border-black p-2 hidden lg:block"><SiReact  className="w-8 h-auto" /></li>
+              <li className="border-2 border-black p-2 hidden lg:block"><SiFigma  className="w-8 h-auto" /></li>
+              <li className="border-2 border-black p-2 hidden lg:block"><SiCanva  className="w-8 h-auto" /></li>
+              <a href="./skills" className="border-2 border-black p-2 hidden lg:block hover:bg-black hover:text-white transition-colors duration-300 ease-in-out"><li><FaEllipsisH  className="w-8 h-auto" /></li></a>
             </ul>
             <p className="absolute right-1 text-sm italic hover:underline"><a href="./skills">Voir plus...</a></p>
           </div>
@@ -93,41 +101,48 @@ export default function Home() {
         <section className="mt-4">
           <h1 className="text-2xl font-bold text-slate-700">Mes projets</h1>
           <p className="italic text-xs text-slate-400">Voici mes différents projets à travers lesquels j'ai pu appliquer mes compétences.</p>
-          <div className="w-11/12 m-auto">
-            <ul>
-              <li className="border-2 border-slate-900 mt-2">
+          <div className="w-11/12 m-auto mt-2">
+            <ul className="lg:flex lg:flex-wrap">
+              <li className="border-2 border-slate-900 mt-0 lg:w-1/2">
                 <div className="flex">
                   <Image src={SSL} alt="SimpleScheduler Logo" className="w-1/3 h-auto m-2 rounded"></Image>
                   <div className="flex flex-col justify-center items-start">
                     <h2 className="font-bold">SimpleScheduler</h2>
-                    <p className="text-sm italic text-slate-600">courte description...</p>
+                    <p className="text-xs md:text-sm italic text-slate-600">Projet ayant pour but de créer une application calendar permettant d'afficher les emplois du temps universitaire, professionnel et/ou personnel.</p>
                   </div>
                 </div>
                 <p className="text-xs ml-4 mb-2 font-bold text-slate-400">//Design UI/UX</p>
               </li>
-              <li className="border-2 border-slate-900 mt-0">
+              <li className="border-2 border-slate-900 mt-0 lg:w-1/2">
                 <div className="flex">
                   <Image src={DnD} alt="Encyclopé'DnD Logo" className="w-1/3 h-auto m-2 rounded-3xl"></Image>
                   <div className="flex flex-col justify-center items-start">
                     <h2 className="font-bold">Encyclopé'DnD</h2>
-                    <p className="text-sm italic text-slate-600">courte description...</p>
+                    <p className="text-sm italic text-slate-600">Projet visant à créer une application web basé sur le jeu Dungeons And Dragons 5th edition claire et intuitif grâce à une API.</p>
                   </div>
                 </div>
                 <p className="text-xs ml-4 mb-2 font-bold text-slate-400">//Front-end //Back-end //Design UI/UX</p>
               </li>
-              <li className="border-2 border-slate-900 mt-0">
+              <li className="border-2 border-slate-900 mt-0 lg:w-1/2">
                 <div className="flex">
                   <Image src={EduCapt} alt="Educapture Logo" className="w-1/3 h-auto m-2 rounded"></Image>
                   <div className="flex flex-col justify-center items-start">
                     <h2 className="font-bold">Éducapture</h2>
-                    <p className="text-sm italic text-slate-600">courte description...</p>
+                    <p className="text-sm italic text-slate-600">Le milieu de la photo scolaire peut parfois être un calvaire pour les écoles, les photographes et les parents. Éducapture en est la solution.</p>
                   </div>
                 </div>
                 <p className="text-xs ml-4 mb-2 font-bold text-slate-400">//Design UI/UX</p>
               </li>
+              <li className="hidden lg:block lg:border-2 lg:border-slate-900 lg:mt-0 lg:w-1/2 hover:bg-slate-900 hover:text-white transition-colors duration-300 ease-in-out">
+                <a href="./projects">
+                  <div className="h-full flex justify-center items-center">
+                    <h1 className="text-3xl font-bold text-center">Plus de projets ?<br/>Cliquez ici</h1>
+                  </div>
+                </a>
+              </li>
             </ul>
           </div>
-          <p className="absolute right-1 text-sm italic hover:underline"><a href="./projects">Voir plus...</a></p>
+          <p className="absolute right-1 text-sm italic hover:underline lg:hidden"><a href="./projects">Voir plus...</a></p>
         </section>
           
         <section className="mt-2">
@@ -155,7 +170,7 @@ export default function Home() {
       </main>
 
       <footer className="bg-slate-700 text-gray-50 md:w-2/3 lg:w-3/4">
-        <section className="w-3/4 m-auto md:w-56 mb-0.5">
+        <section className="w-3/4 m-auto md:w-1/3 md:ml-24 mb-0.5 md:mb-2">
           <h1 className="font-bold text-xl mb-1">Mes réseaux</h1>
           <ul className="flex justify-around">
             <li><a href=""><FaGithub className="h-auto w-8"/></a></li>
